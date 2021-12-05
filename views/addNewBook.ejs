@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.2/bootstrap-float-label.min.css"/>
+    <link rel="stylesheet" href="/pagedesginStyles.css">
+    <link rel="stylesheet" href="/logintSyle.css">
+    <link rel="stylesheet" href="/signUpStyle.css">
+
+    
+    <title>Add New Book</title>
+</head>
+<body>
+  <%- include('./partials/navbar')  %>
+
+  <br><br><br>
+
+    <div class="container marginTop marginBottomReduce minHeight mb-5" >
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-8 " style="z-index: 100;">
+              <form action="/books/addNewBook" method="POST" enctype="multipart/form-data" name="addNewBookForm" id="addNewBookForm"> 
+                <main>
+                  
+                    
+                    <div class="form form-active">
+                      <div class="form--header-container">
+                        <h1 class="form--header-title" style="text-align: center;">
+                          Add New Book <i  class="fas fa-book"></i>
+                        </h1>
+              
+                        <p class="form--header-text" style="font-weight: bold;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                          Enter Book Name.
+                        </p>
+                      </div>
+                      <!-- <input type="text" placeholder="Username" /> -->
+                      <label class="form-group has-float-label">
+                        <div class="errorMsg hidden" id="bookNameError"></div>
+                        <input class="form-control" type="text" name="bookName" id="bookName" placeholder=" Book Name" required/>
+                        <span class="pushRight">Book Name</span>
+                      </label>
+                      
+                      
+                     
+              
+                        <p class="form--header-text" style="font-weight: bold;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                          Enter Author's Name
+                        </p>
+                      </div>
+              
+                      
+                      <label class="form-group has-float-label">
+                        <div class="errorMsg hidden" id="authorError"></div>
+                        <input class="form-control" type="text" id="author" name="author" placeholder="Author" required/>
+                        <span class="pushRight">Author</span>
+                      </label>
+                      
+                      
+              
+                        <p class="form--header-text" style="font-weight: bold;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                          Enter Genre of Book
+                        </p>
+                      <!-- </div> -->
+              
+                      <label class="form-group has-float-label">
+                        <div class="errorMsg hidden" id="genreError"></div>
+                        <input class="form-control" type="text" id="genre" name="genre" placeholder="Genre" required/>
+                        <span class="pushRight">Genre</span>
+                        
+                      </label>
+                      
+                      
+                      
+                     
+              
+                        <p class="form--header-text" style="font-weight: bold;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                          Upload Author's Picture
+                        </p>
+                      <!-- </div> -->
+              
+                      <label class="form-group ">
+                        <div class="errorMsg hidden" id="authorpicError"></div>
+                        <input class="form-control" type="file" id="authorpic" name="authorpic" placeholder="author Pic" accept="image/*" required/>
+                        
+                      </label>
+                      
+                        <div ><img id="preview" style="height: 100px;width: 100px;" src="" alt=""></div>
+                      
+                    
+              
+                        <p class="form--header-text" style="font-weight: bold;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                          Summary About Book
+                        </p>
+                      <!-- </div> -->
+              
+                      <label class="form-group has-float-label">
+                        <div class="errorMsg hidden" id="aboutError"></div>
+                        <input class="form-control" type="text" id="about" name="about" placeholder="About" required/>
+                        <span class="pushRight">About</span>
+                      </label>
+                      
+                      
+                     <center><button class="form__btn" id="signUpBtn">Add Book</button></center> 
+                    <!-- </div> -->
+                    
+                    <div class="form--message"></div>
+
+                  
+                  </main>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div id="particles-js">
+
+    </div>
+
+    
+    <%- include('./partials/footer')  %>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
+ 
+
+    <script src="/pagedesignAnimations.js"></script>
+    <script src="/addNewBookFormValidation.js"></script>
+    <script src="/addNewBookStepperForm.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#preview').hide();
+        })
+        $('#authorpic').on('change',function(e){
+            const file=this.files[0];
+            const fileReader=new FileReader();
+            if(file){
+                fileReader.readAsDataURL(file);
+            }
+            fileReader.addEventListener('load',function(e){
+                $('#preview').attr('src',fileReader.result);
+                $('#preview').show();
+            },false);
+        })
+    </script>
+</body>
+</html>
